@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>For Password change</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body>
+<div class="container text-center">
+<h1>Give me the user name and password ADMIN</h1>
+<form th:action="@{/Enter_admin}" method="post">
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input name="email_ad" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="adpass" placeholder="Password">
+  </div>
+  
+  <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+<div class="m-3" >
+<h3 ><a th:href="@{/Admin_page}">create ADMIN account</a></h3>
+</div>
+</div>
+</body>
+</html>

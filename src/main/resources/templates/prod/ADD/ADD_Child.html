@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to Shop </title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body>
+<form th:action="@{/Child}" method="post" 
+      style="max-width: 600px; margin: 0 auto;"
+      th:object="${child}" >
+      <div class="m-3">
+      <div class="form-group row">
+      <label class="col-form-label col-4">Add the child product</label>
+      <div class="col-8">
+       <input type="text" class="form-control" th:field="*{product}" required/>
+      </div>
+     
+      </div>
+      <div>
+      <button type="submit" class="btn btn-primary">ADD</button>
+      
+      </div>
+      </div>
+      
+      </form>
+
+</body>
+</html>

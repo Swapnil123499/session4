@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Demo</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body>
+<div class="container text-center">
+<h1>Please fill the information</h1>
+</div>
+<form th:action="@{/buy}" method="post" 
+      style="max-width: 400px; margin: 0 auto;"
+      th:object="${customer}" >
+      <div class="m-6">
+      <div class="form-group row">
+      <label class="col-form-label col-4">First name</label>
+      <div class="col-8">
+       <input type="text" class="form-control" th:field="*{name}" required/>
+      </div>
+      </div>
+ </div>
+      
+      
+       <div class="m-6">
+      <div class="form-group row">
+      <label class="col-form-label col-4">Last name</label>
+      <div class="col-8">
+       <input type="text" class="form-control" th:field="*{surname}" required/>
+      </div>
+      </div>
+ </div>
+ 
+  <div class="m-6">
+      <div class="form-group row">
+      <label class="col-form-label col-4">Email</label>
+      <div class="col-8">
+       <input type="email" class="form-control" th:field="*{email}" required/>
+      </div>
+      </div>
+ </div>
+ 
+  <div class="m-6">
+      <div class="form-group row">
+      <label class="col-form-label col-4">Pincode</label>
+      <div class="col-8">
+       <input type="text" class="form-control" th:field="*{pincod}" required/>
+      </div>
+      </div>
+ </div>
+     
+      
+       <div class="m-6">
+      <div class="form-group row">
+      <label class="col-form-label col-4">Address</label>
+      <div class="col-8">
+       <input type="text" class="form-control" th:field="*{address}" required/>
+      </div>
+      </div>
+ </div>
+ 
+ 
+ 
+ <div class="m-6">
+      <div class="form-group row">
+      <label class="col-form-label col-4">Product Name</label>
+      <div class="col-8">
+       <input type="text" class="form-control" th:field="*{product_name}" required/>
+      </div>
+      </div>
+ </div>
+ 
+    <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Category</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" th:field="*{category}" id="gridRadios1" value="Category_Men" checked>
+          <label class="form-check-label" for="gridRadios1">
+            Men Product
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" th:field="*{category}" id="gridRadios2" value="Category_Women">
+          <label class="form-check-label" for="gridRadios2">
+            Women Product
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <input class="form-check-input" type="radio" th:field="*{category}" id="gridRadios3" value="Category_Child" >
+          <label class="form-check-label" for="gridRadios3">
+            Child  Product
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+ 
+ <div class="m-6">
+      <div class="form-group row">
+      <label class="col-form-label col-4">Product Size</label>
+      <div class="col-8">
+       <input type="text" class="form-control" th:field="*{size}" required/>
+      </div>
+      </div>
+      
+      <div class ="text-right">
+      <button type="submit" class="btn btn-secondary">Buy</button>
+      
+      </div>
+      </div>
+      
+      </form>
+
+</body>
+</html>

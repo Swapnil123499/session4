@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin page</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body>
+<div class="container text-center">
+<h1>Welcome Admin</h1>
+<h3><a th:href="@{/list_users}">List All Users</a></h3>
+<h3><a th:href="@{/register}">Register</a></h3>
+<hr>
+<h3><a th:href="@{/login}">Login</a></h3>
+<h3><a th:href="@{/Admin}">Change Password</a></h3>
+<h3><a th:href="@{/show}">Shop</a></h3>
+</div>
+ <div class="text">
+  <h6><a th:href="@{/child}">Add child product</a></h6>
+  <h6><a th:href="@{/men}">Add men product</a></h6>
+  <h6><a th:href="@{/women}">Add women product</a></h6>
+  </div>
+  <div class="text-right">
+  <h6><a th:href="@{/childdelete}">delete child product</a></h6>
+  <h6><a th:href="@{/mendelete}">delete men product</a></h6>
+  <h6><a th:href="@{/womendelete}">delete women product</a></h6>
+  </div>
+<hr>
+<hr>
+
+ <h6><a th:href="@{/List}">List of all customer</a></h6>
+  <h6><a th:href="@{/filter}">filter by date And category</a></h6>
+  
+
+</body>
+</html>

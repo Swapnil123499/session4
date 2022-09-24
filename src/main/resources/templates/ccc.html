@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome </title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body>
+<p class="text-danger">
+<tr th:text  ="${statments}"/>
+<div class="container text-center">
+<h1>the password not change</h1>
+
+<h3><a th:href="@{/Admin}">Change Password</a></h3>
+<h3><a th:href="@{/asa}">Admin home page</a></h3>
+
+
+</div>
+</body>
+</html>

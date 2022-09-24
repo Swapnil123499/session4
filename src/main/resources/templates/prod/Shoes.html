@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to Shop </title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body>
+<div class="text-center">
+<h1>Welcome to our shop</h1></div>
+<p class="text-danger">
+<tr th:text="${statment}"/>
+</p>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col">
+     
+     
+     <h3>List of child product</h3>
+     <hr>
+     <hr>
+     <hr>
+     
+<table class="table table-striped table-bordered">
+<thead class="thead-dark">
+<tr>
+<th>Product Number</th>
+<th>Product</th>
+</tr>
+
+   
+    
+   
+</thead>
+<tbody>
+<tr th:each="shoes: ${allchild}">
+
+<td th:text="${shoes.id}">product number</td>
+<td th:text="${shoes.product}">product</td>
+
+
+
+
+</tr>
+
+</tbody>
+</table>
+    </div>
+    <div class="col">
+    
+    <h3>List of men product</h3>
+    <hr>
+    <hr>
+    <hr>
+    <table class="table table-striped table-bordered">
+<thead class="thead-dark">
+<tr>
+<th>Product Number</th>
+<th>Product</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="menshoes: ${allmen}">
+
+<td th:text="${menshoes.id}">product number</td>
+<td th:text="${menshoes.men_product}">product</td>
+   
+     
+     
+     </table>
+      
+    </div>
+    <div class="col">
+  
+    <h3>List of women product</h3>
+    <hr>
+    <hr>
+    <hr>
+   <table class="table table-striped table-bordered">
+<thead class="thead-dark">
+<tr>
+<th>Product Number</th>
+<th>Product</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="womenshoes: ${allwomen}">
+
+<td th:text="${womenshoes.id}">product number</td>
+<td th:text="${womenshoes.women_product}">product</td>
+   
+     
+     
+     </table>
+    </div>
+  </div>
+  </div>
+  <div class="text">
+  <h6><a th:href="@{/child}">Add child product</a></h6>
+  <h6><a th:href="@{/men}">Add men product</a></h6>
+  <h6><a th:href="@{/women}">Add women product</a></h6>
+  </div>
+  <div class="text-right">
+  <h6><a th:href="@{/childdelete}">delete child product</a></h6>
+  <h6><a th:href="@{/mendelete}">delete men product</a></h6>
+  <h6><a th:href="@{/womendelete}">delete women product</a></h6>
+  </div>
+  <div class="text-center">
+  <h1><a th:href="@{/customer}">BUY</a></h1>
+  </div>
+</body>
+</html>
